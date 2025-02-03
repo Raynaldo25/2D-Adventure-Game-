@@ -1,16 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class movement : MonoBehaviour
 {
     public GameObject player;
     public float speed = 0.01f;
+    public Boolean hasKey = false;
+    public TextMeshProUGUI AiText;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        AiText.text = "Lets get this rocket on the way! /nWe are going to need some metal first. That should be in our room.";
     }
 
     // Update is called once per frame
@@ -43,6 +47,7 @@ public class movement : MonoBehaviour
         if (collision.gameObject.tag == "key") 
         { 
             Destroy(collision.gameObject);
+            hasKey = true;
         }
         
     }
