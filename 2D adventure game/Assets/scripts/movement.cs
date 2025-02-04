@@ -6,12 +6,28 @@ using TMPro;
 
 public class movement : MonoBehaviour
 {
+    public static movement Instance;
     public GameObject player;
     public float speed = 0.01f;
     public Boolean hasKey = false;
     public TextMeshProUGUI AiText;
 
+    public List<string> myInventory;
+
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
         AiText.text = "Lets get this rocket on the way! /nWe are going to need some metal first. That should be in our room.";
@@ -44,12 +60,20 @@ public class movement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "key") 
+        /*if (collision.gameObject.tag == "key") 
         { 
             Destroy(collision.gameObject);
             hasKey = true;
-        }
+        }*/
         
     }
+
+    public void addItem(string item)
+    {
+        myInventory.Add(item);
+
+    }
+
+
 }
 

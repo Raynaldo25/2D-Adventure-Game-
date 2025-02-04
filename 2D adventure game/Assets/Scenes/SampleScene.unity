@@ -251,7 +251,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -395,7 +395,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -648,6 +648,7 @@ GameObject:
   - component: {fileID: 1039284823}
   - component: {fileID: 1039284822}
   - component: {fileID: 1039284821}
+  - component: {fileID: 1039284824}
   m_Layer: 0
   m_Name: key
   m_TagString: key
@@ -684,7 +685,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -770,6 +771,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1039284824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039284820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78cf18181955ff2419df170bf8560798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemName: Key
+  myPlayer: {fileID: 0}
 --- !u!1 &1843153967
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,7 +946,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.35760057, g: 0.6603774, b: 0.5915259, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -971,7 +986,7 @@ GameObject:
   - component: {fileID: 2001228968}
   m_Layer: 0
   m_Name: p1
-  m_TagString: p1
+  m_TagString: P1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -989,9 +1004,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2001228963}
-  speed: 0.5
+  speed: 0.05
   hasKey: 0
   AiText: {fileID: 738385679}
+  myInventory: []
 --- !u!212 &2001228965
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1197,6 +1213,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 36069234054540052, guid: 79fee30d2d56b2f47a6a02183c82d7fa, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1933312219121126351, guid: 79fee30d2d56b2f47a6a02183c82d7fa, type: 3}
       propertyPath: m_Name
       value: Room door
