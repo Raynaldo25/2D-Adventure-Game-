@@ -9,10 +9,12 @@ public class movement : MonoBehaviour
     public static movement Instance;
     public GameObject player;
     public float speed = 0.01f;
-    public Boolean hasKey = false;
+    public Boolean gardenBotton = false;
     public TextMeshProUGUI AiText;
+    public GameObject gardenDoor;
 
     public List<string> myInventory;
+    
 
     // Start is called before the first frame update
 
@@ -53,18 +55,28 @@ public class movement : MonoBehaviour
             player.transform.position += Vector3.left * speed;
         }
 
-
-
+        if(gardenBotton == false)
+        {
+            Collider gardenDoor = GetComponent<Collider>();
+            gardenDoor.isTrigger = false;
+        }
+        else
+        {
+            Collider gardenDoor = GetComponent<Collider>();
+            gardenDoor.isTrigger = true;
+        }
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        /*if (collision.gameObject.tag == "key") 
+        if (collision.gameObject.tag == "key") 
         { 
-            Destroy(collision.gameObject);
-            hasKey = true;
-        }*/
+            
+            gardenBotton = true;
+        }
+
+        
         
     }
 
