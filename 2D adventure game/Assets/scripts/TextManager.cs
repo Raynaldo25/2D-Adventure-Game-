@@ -36,17 +36,17 @@ public class TextManager : MonoBehaviour
             currentIndex = 1;
         }
 
-        if (list.myInventory.Contains("fuel"))
+        if (list.myInventory.Contains("fuel") && list.myInventory.Contains("metal"))
         {
             currentIndex = 2;
         }
 
-        if (list.myInventory.Contains("nails"))
+        if (list.myInventory.Contains("nails") && list.myInventory.Contains("metal") && list.myInventory.Contains("fuel"))
         {
             currentIndex = 3;
         }
 
-        if (list.myInventory.Contains("sandwich"))
+        if (list.myInventory.Contains("sandwich") && list.myInventory.Contains("metal") && list.myInventory.Contains("fuel") && list.myInventory.Contains("nails"))
         {
             currentIndex = 4;
         }
