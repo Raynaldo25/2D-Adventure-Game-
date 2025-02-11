@@ -20,18 +20,36 @@ public class TextManager : MonoBehaviour
     void Start()
     {
 
-        if (dialogueDisplay != null)
-        {
-            dialogueDisplay.text = dialogue[currentIndex];
-        }
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-       if (list.myInventory.Contains("fuel")) 
-       {
+        if (dialogueDisplay != null)
+        {
+            dialogueDisplay.text = dialogue[currentIndex];
+        }
 
-       }
+        if (list.myInventory.Contains("metal")) 
+        {
+            currentIndex = 1;
+        }
+
+        if (list.myInventory.Contains("fuel"))
+        {
+            currentIndex = 2;
+        }
+
+        if (list.myInventory.Contains("nails"))
+        {
+            currentIndex = 3;
+        }
+
+        if (list.myInventory.Contains("sandwich"))
+        {
+            currentIndex = 4;
+        }
+
     }
 }
