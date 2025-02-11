@@ -11,7 +11,7 @@ public class movement : MonoBehaviour
     public float speed = 0.01f;
     public Boolean gardenBotton = false;
     public TextMeshProUGUI AiText;
-    public GameObject gardenDoor;
+    
 
     public List<string> myInventory;
     
@@ -32,7 +32,7 @@ public class movement : MonoBehaviour
     }
     void Start()
     {
-        AiText.text = "Lets get this rocket on the way! /nWe are going to need some metal first. That should be in our room.";
+        AiText.text = "Lets get this rocket on the way! \nWe are going to need some metal first. That should be in our room.";
     }
 
     // Update is called once per frame
@@ -55,29 +55,21 @@ public class movement : MonoBehaviour
             player.transform.position += Vector3.left * speed;
         }
 
-        if(gardenBotton == false)
-        {
-            Collider gardenDoor = GetComponent<Collider>();
-            gardenDoor.isTrigger = false;
-        }
-        else
-        {
-            Collider gardenDoor = GetComponent<Collider>();
-            gardenDoor.isTrigger = true;
-        }
+        
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "key") 
-        { 
-            
+        if (collision.gameObject.tag == "key")
+        {
+
             gardenBotton = true;
+            Debug.Log("boolean changed to true");
         }
 
-        
-        
+
+
     }
 
     public void addItem(string item)
