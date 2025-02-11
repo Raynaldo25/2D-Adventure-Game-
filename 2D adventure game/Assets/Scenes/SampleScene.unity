@@ -202,13 +202,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95189715}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.47, y: 9.16, z: 0}
   m_LocalScale: {x: 3.1485932, y: 1.198, z: 1.198}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &95189718
 MonoBehaviour:
@@ -360,13 +360,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190016334}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 16.68, y: -0.19, z: 0}
   m_LocalScale: {x: 3.148593, y: 1.198, z: 1.198}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &190016337
 MonoBehaviour:
@@ -510,13 +510,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &738385677
 GameObject:
@@ -529,6 +529,7 @@ GameObject:
   - component: {fileID: 738385678}
   - component: {fileID: 738385680}
   - component: {fileID: 738385679}
+  - component: {fileID: 738385681}
   m_Layer: 5
   m_Name: AI text
   m_TagString: Untagged
@@ -549,6 +550,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1843153971}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -652,6 +654,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738385677}
   m_CullTransparentMesh: 1
+--- !u!114 &738385681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738385677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65bb1b67c3292e449e9b39fcc3d2f22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueDisplay: {fileID: 738385679}
+  dialogue:
+  - Lets get this rocket on the way! \nWe are going to need some metal first. That
+    should be in our room.
+  - Nice, now we will need some fuel.\nThat is also in the bedroom
+  - Ok. The nails to fix them together is in the kitchen, to the right
+  - I am hungry, can you get me a sandwich please
+  - ALRIGHTY. Get the key to the garden and we off!!!
+  currentIndex: 0
 --- !u!1 &1039284820
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,13 +801,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039284820}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.76, y: 5.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1039284824
 MonoBehaviour:
@@ -896,6 +919,7 @@ RectTransform:
   m_Children:
   - {fileID: 738385678}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -978,13 +1002,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927015251}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.67, y: -3.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2001228963
 GameObject:
@@ -1019,7 +1043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2001228963}
-  speed: 0.1
+  speed: 0.03
   gardenBotton: 0
   AiText: {fileID: 738385679}
   myInventory: []
@@ -1082,13 +1106,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001228963}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.97, y: -3.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &2001228967
 CapsuleCollider2D:
@@ -1212,13 +1236,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080497930}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1102908479219689696
 PrefabInstance:
@@ -1235,6 +1259,10 @@ PrefabInstance:
     - target: {fileID: 1933312219121126351, guid: 79fee30d2d56b2f47a6a02183c82d7fa, type: 3}
       propertyPath: m_Name
       value: Room door
+      objectReference: {fileID: 0}
+    - target: {fileID: 2421753772064624642, guid: 79fee30d2d56b2f47a6a02183c82d7fa, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2421753772064624642, guid: 79fee30d2d56b2f47a6a02183c82d7fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1281,16 +1309,3 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79fee30d2d56b2f47a6a02183c82d7fa, type: 3}
---- !u!1660057539 &9223372036854775807
-SceneRoots:
-  m_ObjectHideFlags: 0
-  m_Roots:
-  - {fileID: 519420032}
-  - {fileID: 2001228966}
-  - {fileID: 1039284823}
-  - {fileID: 1927015253}
-  - {fileID: 95189717}
-  - {fileID: 1102908479219689696}
-  - {fileID: 190016336}
-  - {fileID: 1843153971}
-  - {fileID: 2080497933}

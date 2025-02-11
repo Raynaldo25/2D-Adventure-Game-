@@ -32,7 +32,7 @@ public class movement : MonoBehaviour
     }
     void Start()
     {
-        AiText.text = "Lets get this rocket on the way! \nWe are going to need some metal first. That should be in our room.";
+       
     }
 
     // Update is called once per frame
