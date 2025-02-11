@@ -6,8 +6,8 @@ using UnityEngine;
 public class Gbotton : MonoBehaviour
 {
 
-    public GameObject gardenDoor;
-    public movement movement;   
+    public Collider2D gardenDoor;
+    public MovementLogic movement;   
     // Start is called before the first frame update
     void Start()
     {
@@ -17,14 +17,14 @@ public class Gbotton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (movement.gardenBotton == false)
+        if (movement.isGardenBotton == false)
         {
-            Collider gardenDoor = GetComponent<Collider>();
+            gardenDoor = GetComponent<Collider2D>();
             gardenDoor.isTrigger = false;
         }
-        if (movement.gardenBotton == true)
+        if (movement.isGardenBotton == true)
         {
-            Collider gardenDoor = GetComponent<Collider>();
+            gardenDoor = GetComponent<Collider2D>();
             gardenDoor.isTrigger = true;
         }
     }

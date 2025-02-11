@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class movement : MonoBehaviour
+public class MovementLogic : MonoBehaviour
 {
-    public static movement Instance;
+    public static MovementLogic Instance;
     public GameObject player;
     public float speed = 0.01f;
-    public Boolean gardenBotton = false;
+    public Boolean isGardenBotton = false;
     public TextMeshProUGUI AiText;
     
 
@@ -64,7 +64,7 @@ public class movement : MonoBehaviour
         if (collision.gameObject.tag == "key")
         {
 
-            gardenBotton = true;
+            isGardenBotton = true;
             Debug.Log("boolean changed to true");
         }
 

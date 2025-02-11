@@ -6,11 +6,11 @@ public class itemName : MonoBehaviour
 {
     public string ItemName;
 
-    public movement myPlayer;
+    public MovementLogic myPlayer;
     // Start is called before the first frame update
     void Start()
     {
-        myPlayer = FindObjectOfType<movement>();
+        myPlayer = FindObjectOfType<MovementLogic>();
     }
 
     // Update is called once per frame
